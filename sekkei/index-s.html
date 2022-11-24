@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>設計ファイル</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet-s" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet-s" type="text/css" href="stylesheet-s.css">
+</head>
+<body>
+    <form action="test.html" method="post" enctype="multipart/form-data" >
+      <input type="file" name="test" onchange="previewFile(this);">
+      <input type="submit" value="送信する">
+    </form>
+    <p>プレビュー</p>
+    <img id="preview">
+   
+    <script>
+    function previewFile(hoge){
+      var fileData = new FileReader();
+      fileData.onload = (function() {
+        //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+        //プレビュー表示している
+        document.getElementById('preview').src = fileData.result;
+      });
+      fileData.readAsDataURL(hoge.files[0]);
+    }
+    </script>
+
+    <table border="1" style="border-collapse: collapse">
+    <tr>
+        <th>言語</th>
+        <td>Python</td>
+        <td>C++</td>
+    </tr>
+    <tr>
+        <th>タイプ</th>
+        <td>スクリプト型言語</td>
+        <td>コンパイラ型言語</td>
+    </tr>
+    </table>
+    </body>
+</html>
