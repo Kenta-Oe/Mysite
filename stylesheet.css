@@ -41,7 +41,7 @@ a {
 }
 
 .top-wrapper p {
-  
+  opacity: 0.7;
   font-size: 20px;
   color:#3b3021;
   margin-bottom: 0px;
