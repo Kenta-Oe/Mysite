@@ -24,7 +24,6 @@ a {
 .top-wrapper {
   padding-bottom: 300px;
   padding: 170px;
-  text-align: center;
   width: 100%;
   background: -moz-linear-gradient(top, #FFF, #fbd6a2 30%, #f3b37c 90%, #9fefc6);
   background: -webkit-linear-gradient(top, #FFF, #fbd6a2 30%, #f3b37c 90%, #9fefc6);
